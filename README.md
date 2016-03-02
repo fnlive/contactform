@@ -17,8 +17,7 @@ This software is free software and carries a MIT license.
 Todo
 ----------------------------------
 
-* Layout form elements in grid.
-* Style form using LESS and CSS.
+* Todo.
 
 
 History
