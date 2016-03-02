@@ -39,7 +39,7 @@ $app->router->add('', function () use ($app) {
 
     $app->views->add('default/page', [
         'title' => "Testing contact form",
-        'content' => "Page for testing contact form. Click below linke to administrate and view messages.",
+        'content' => "Page for testing contact form. Click below link to administrate and view messages.",
         'links' => [
             [
                 'href' => $app->url->create('admin'),
