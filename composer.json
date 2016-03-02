@@ -1,0 +1,22 @@
+{
+    "name": "fnlive/contactform",
+    "type": "library",
+    "description": "Classes for Contact Forms and message admin",
+    "keywords": ["html", "forms", "education"],
+    "homepage": "http://dbwebb.se/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fredrik Nilsson",
+            "email": "fn@live.se",
+            "homepage": "https://github.com/fnlive",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": { "Mos\\": "src/" }
+    }
+}
