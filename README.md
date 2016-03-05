@@ -19,6 +19,8 @@ Installation
 * copy template files from vendor/fnlive/contactform/view/contactform/* to Anax-MVC/app/view/contactform/*
 * point your browser to file vendor/fnlive/contactform/webroot/testContactform.php to try out module
 
+Anax-MVC/composer.json snippet:
+
         "require": {
             "php": ">=5.4",
             "mos/cform": "2.*@dev",
