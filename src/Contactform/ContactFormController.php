@@ -34,7 +34,7 @@ class ContactFormController implements \Anax\DI\IInjectionAware
         $form = $this->createContactForm();
         $form->check([$this, 'callbackSuccess'], [$this, 'callbackFail']);
         // TODO: How to package template-files into package.
-        $this->di->views->add('default/article', [
+        $this->di->views->add('contactform/contactform', [
             'content' => $form->getHTML()
         ]);
     }

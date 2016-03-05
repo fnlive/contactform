@@ -7,6 +7,9 @@
 // Get environment & autoloader and the $app-object.
 require __DIR__.'/config.php';
 
+// Create services and inject into the app.
+$di  = new \Anax\DI\CDIFactory();
+
 //Load required services
 $di->set('FormController', function () use ($di) {
     $controller = new \Anax\Users\FormController();
@@ -16,7 +19,7 @@ $di->set('FormController', function () use ($di) {
 
 $app = new \Anax\MVC\CApplicationBasic($di);
 
-$app->theme->configure(ANAX_APP_PATH . 'config/theme_me.php');
+$app->theme->configure(ANAX_APP_PATH . 'config/theme_test.php');
 
 // On production server, set pretty urls and use rewrite in .htaccess
 $app->url->setUrlType(
@@ -41,6 +44,10 @@ $app->router->add('', function () use ($app) {
         'title' => "Testing contact form",
         'content' => "Page for testing contact form. Click below link to administrate and view messages.",
         'links' => [
+            [
+                'href' => $app->url->create('contactformadmin/setup'),
+                'text' => "Setup user table with test data (first time setup)",
+            ],
             [
                 'href' => $app->url->create('admin'),
                 'text' => "Contact form administration",
